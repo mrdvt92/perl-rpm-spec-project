@@ -9,6 +9,20 @@ Source0:        http://www.cpan.org/modules/by-module/CPANPLUS/CPANPLUS-%{versio
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(Log::Message)
+BuildRequires:  perl(Package::Constants)
+BuildRequires:  perl(Object::Accessor)
+BuildRequires:  perl(Archive::Extract)
+BuildRequires:  perl(Term::UI)
+BuildRequires:  perl(DBIx::Simple)
+BuildRequires:  perl(DBD::SQLite)
+Requires:       perl(Log::Message)
+Requires:       perl(Package::Constants)
+Requires:       perl(Object::Accessor)
+Requires:       perl(Archive::Extract)
+Requires:       perl(Term::UI)
+Requires:       perl(DBIx::Simple)
+Requires:       perl(DBD::SQLite)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -43,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog META.json README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+%{_mandir}/man1/*
+%{_bindir}/*
 
 %changelog
 * Sun Mar 02 2025 Michael R. Davis <mrdvt92@yahoo.com> 0.9916-1
