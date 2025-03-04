@@ -1,12 +1,11 @@
 Name:           perl-App-CPANtoRPM
 Version:        1.15
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Library used by the cpantorpm tool
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/App-CPANtoRPM/
 Source0:        http://www.cpan.org/modules/by-module/App/App-CPANtoRPM-%{version}.tar.gz
-Source1:        App-CPANtoRPM.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl >= 0:5.006
