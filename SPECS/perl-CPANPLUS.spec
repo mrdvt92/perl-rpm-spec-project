@@ -1,6 +1,6 @@
 Name:           perl-CPANPLUS
 Version:        0.9916
-Release:        1%{?dist}
+Release:        4%{?dist}
 Summary:        API & CLI access to the CPAN mirrors
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -23,6 +23,15 @@ Requires:       perl(Archive::Extract)
 Requires:       perl(Term::UI)
 Requires:       perl(DBIx::Simple)
 Requires:       perl(DBD::SQLite)
+Requires:       perl(Module::Pluggable)
+#cpanp cannot install any packages that look like core https://github.com/jib/cpanplus-devel/blob/18efaed3b4b9e307795a41cd1b11177a456f5187/lib/CPANPLUS/Module.pm#L437
+Requires:       perl(blib)
+Requires:       perl(FindBin)
+Requires:       perl(Devel::Peek)
+#Install common build systems for script
+Requires:       perl(ExtUtils::MakeMaker)
+Requires:       perl(Module::Build)
+Requires:       perl(Module::Build::Tiny)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description

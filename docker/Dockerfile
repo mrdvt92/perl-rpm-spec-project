@@ -6,9 +6,7 @@ RUN /usr/bin/crb enable
 RUN yum -y update
 
 # Change RPM here to the RPM that you are testing
-
-RUN yum -y install perl-CPANPLUS
+RUN yum -y install perl-CPANPLUS #touch 3
 
 # cat is the daemon here
-
 CMD ["/usr/bin/cat"]
